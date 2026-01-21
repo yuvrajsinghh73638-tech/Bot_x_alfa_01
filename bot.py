@@ -1,18 +1,11 @@
 import os
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
-if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN not found in environment variables")
-    import os
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
-if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN not found in environment variables")
-
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+
+BOT_TOKEN = os.getenv("8529180151:AAES7AWR818cGYCd_DA3SrK4AE7ATcwR6_o")
+
+if not BOT_TOKEN:
+    raise ValueError("8529180151:AAES7AWR818cGYCd_DA3SrK4AE7ATcwR6_o")
 
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 
@@ -22,3 +15,4 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 app.add_handler(CommandHandler("start", start))
 
 app.run_polling()
+
